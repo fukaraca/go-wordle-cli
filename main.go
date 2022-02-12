@@ -131,6 +131,8 @@ func startGame() {
 		//game over Failed
 		if len(tries) == 6 && !foundWordle {
 			erroR.Println("You have FAILED! Type restart or exit!")
+			erroR.Print("The Wordle was:")
+			bingo.Printf("%s\n", wordle)
 			erroR.Print("-> ")
 			text, _ := reader.ReadString('\n')
 			text = replacer(text)
